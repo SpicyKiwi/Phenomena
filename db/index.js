@@ -7,7 +7,7 @@ const CONNECTION_STRING = "postgres://spicykiwi@localhost:5432/phenomena-dev"
 // Create the client using new Client(CONNECTION_STRING)
 // Do not connect to the client in this file!
 
-const client = new Client(CONNECTION_STRING)
+const client = new Client(process.env.DATABASE_URL || CONNECTION_STRING)
 
 /**
  * Report Related Methods
